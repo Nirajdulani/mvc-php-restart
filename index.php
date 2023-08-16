@@ -5,7 +5,8 @@ $mvc_path = __DIR__;
 
 $get_url = (isset($_GET['url'])) ? $_GET['url'] : 'base/index/id/45/77';
 
-if (!str_contains($get_url, '/')) {
+if (!str_contains($get_url, '/')) 
+{
   echo 'Please provide a method name after controller like controller /  method name in url';
   exit;
 }

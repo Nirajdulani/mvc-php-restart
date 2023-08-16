@@ -2,20 +2,20 @@
 
 class doctorscontroller
 {
-  public $user_model;
+  public $doctor_model;
 
   public function __construct()
   {
 
     // use model function for load model folder model name
-    model('user');
-    $this->user_model = new User();
+    model('doctor');
+    $this->doctor_model = new doctor();
   }
 
   public function index()
   {
 
-    $doctors =  $this->user_model->get_all();
+    $doctors =  $this->doctor_model->get_all();
 
     view('doctors', compact('doctors'));
   }
@@ -42,7 +42,7 @@ class doctorscontroller
     ];
 
 
-    $result = $this->user_model->create($data);
+    $result = $this->doctor_model->create($data);
 
     if ($result) {
       header('Location: ?url=doctors/index');
@@ -53,11 +53,27 @@ class doctorscontroller
   public function delete($id)
   {
 
-    $result =  $this->user_model->delete($id);
+    $result =  $this->doctor_model->delete($id);
 
     if ($result) {
       header('Location: ?url=doctors/index');
       exit;
     }
   }
+
+  public function display($id=null)
+  {
+    // $doctor =  $this->doctor_model->get_one($id);
+    // dd($doctor);
+   
+  }
+
+  public function edit($id=null)
+  {
+   
+    
+
+  
+  }
+
 }
