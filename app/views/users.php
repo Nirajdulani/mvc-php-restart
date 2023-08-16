@@ -148,11 +148,18 @@
                     </td>
 
                     <td class="px-4 py-4 text-sm whitespace-nowrap">
+                      <button class="mr-2">
+                        <a href="<?= set_url('users/edit/' . $user['id']) ?>" class="text-blue-500 ">
+                          Edit
+                        </a>
+                      </button>
+
                       <button>
                         <a href="<?= set_url('users/delete/' . $user['id']) ?>" class="text-red-500 ">
                           Delete
                         </a>
                       </button>
+
                     </td>
                   </tr>
 
