@@ -7,8 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <form action="?url=doctors/create" method="post">
 
+  <form action="?url=doctors/create" method="post">
+  
+  <!-- <div class="grid grid-cols-2 p-2">
+    <div><span>FirstName</span>
+      <input type="text" name="" id="" class="border-2"></div>
+      <div><span>LastName</span>
+      <input type="text" name="" id=""  class="border-2"></div>
+  </div> -->
+  
   <div>
     <label for="">Firstname</label>
   <input type="text" name="firstname" id="firstname" class="border-2">
@@ -41,10 +49,10 @@
 
 <div>
   <input type="submit" name="submit" id="submit" class="cursor-pointer">
-</div>
+</div> 
 
 
-  </form>
+   </form>
   
 </body>
 </html>

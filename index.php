@@ -5,14 +5,14 @@ $mvc_path = __DIR__;
 
 $get_url = (isset($_GET['url'])) ? $_GET['url'] : 'base/index/id/45/77';
 
-if (!str_contains($get_url, '/')) 
+$url_parmas = explode('/', $get_url);                 //[ 'base', 'index','id',45,77]
+if (!count($url_parmas)) 
 {
   echo 'Please provide a method name after controller like controller /  method name in url';
   exit;
 }
 
-$url_parmas = explode('/', $get_url);                 //[ 'base', 'index','id',45,77]
-
+ 
 $first_two  = array_slice($url_parmas, 0, 2);    // [ 'base', 'index']
 $other_params = array_slice($url_parmas, 2);       // ['id',45,77]
 
